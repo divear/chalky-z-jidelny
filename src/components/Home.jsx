@@ -18,7 +18,7 @@ function Home() {
         }, []);
 
 return <div>
-        <div>
+        <title>Chálky ze školní jídelny</title>
             <div className="Nejnovější chálky">
                 <h2>Nejnovější chálky</h2>
                 <div className="chalky">
@@ -33,8 +33,7 @@ return <div>
                     })}
                 </div>     
             </div>
-        </div>
-    </div>;
+    </div>
 }
 
 export default Home;

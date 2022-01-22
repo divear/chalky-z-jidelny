@@ -42,3 +42,8 @@ body{
   color: rgba(255, 255, 255, 0.534);
   float: right;
 }
+.comment{
+  padding: 2vw;
+  margin: 5vw;
+  background-color: var(--bg);
+}

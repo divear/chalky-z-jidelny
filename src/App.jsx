@@ -13,7 +13,6 @@ function App() {
     <>
       <div onClick={()=>window.location = "/"}>
         <h1>🍛 Chálky ze školní jídelny</h1>
-        <title>Chálky ze školní jídelny</title>
       </div>
       <Router>
         <Routes>
