@@ -1,38 +1,30 @@
-.App {
-  text-align: center;
+:root{
+  --bg: rgb(27, 29, 36);
+  --fr: rgb(42, 49, 71);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: var(--bg);
+  color: rgb(228, 231, 248);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.chalky{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto)
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.chalka{
+  background-color: var(--fr);
+  border-radius: 2vw;
+  padding: 1vw;
+  width: 90%;
 }
 
-.App-link {
-  color: #61dafb;
+.chalkaImg{
+  width: 10vw;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.stars{
+  float: right;
 }
