@@ -24,7 +24,7 @@ return <div>
                 <div className="chalky">
                     {data[0] && data.map((d)=>{
                         return(
-                            <div className="chalka">
+                            <div onClick={()=>window.location = `/chalky/${d.id}`} key={d.id} className="chalka">
                                 <h4>{d.nazev}</h4>
                                 <h4 className='stars'>{d.stars}/5</h4>
                                 <img className='chalkaImg' src={d.img} alt="🍛" />

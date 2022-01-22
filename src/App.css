@@ -24,7 +24,21 @@ body{
 
 .chalkaImg{
   width: 10vw;
+  border-radius: 1vw;
+}
+.chalkaImgBig{
+  width: 20vw;
+  border-radius: 1vw;
 }
 .stars{
+  float: right;
+}
+.specificChalka{
+  background-color: var(--fr);
+  border-radius: 1vw;
+  padding: 1vw;
+}
+.date{
+  color: rgba(255, 255, 255, 0.534);
   float: right;
 }

@@ -11,7 +11,7 @@ CREATE TABLE chalky (
 );
 
 INSERT INTO chalky(nazev, img, datum, stars) VALUES('dobrej chálec' , 'https://www.chiropracticmoves.com.au/wp-content/uploads/2019/12/Junk-food.jpg', now(), 0);
-INSERT INTO comments(body, posted_date) VALUES('dobrej oběd', now());
+INSERT INTO comments(body, posted_date, chalka_id) VALUES('dobrej oběd', now(), 1);
 
 
 SELECT * FROM chalky;
