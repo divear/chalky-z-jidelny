@@ -27,14 +27,14 @@ function SpecificChalka() {
             <h2>{data[0] && data[0].nazev}</h2>
             <h4>{data[0] && data[0].stars}/5</h4>
             <h3 className='date'>{data[0] && data[0].posted_date}</h3>
-            <img className='chalkaImgBig' src={data[0] && data[0].img} alt="" />
+            <a href={data[0] && data[0].img}><img className='chalkaImgBig' src={data[0] && data[0].img} alt=""/></a>
 
-            {data[0] && data.map((d)=>{
+            {data[0] && data[0].comment_body && data.map((d)=>{
                 return(
                     <div key={d.comment_id} className='comment'>
-                        <i>{d.comment_username}</i>
-                        <h2>{d.comment_body}</h2>
                         <h3 className='date'>{d.comment_date}</h3>
+                        <i>{d.comment_username || "anonym"}</i>
+                        <h2>{d.comment_body}</h2>
                     </div>
                 )
             })}

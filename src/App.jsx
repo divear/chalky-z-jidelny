@@ -11,7 +11,7 @@ import SpecificChalka from './components/SpecificChalka';
 function App() {
   return (
     <>
-      <div onClick={()=>window.location = "/"}>
+      <div className='header' onClick={()=>window.location = "/"}>
         <h1>🍛 Chálky ze školní jídelny</h1>
       </div>
       <Router>

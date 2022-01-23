@@ -6,12 +6,12 @@ function Home() {
 
     useEffect(() => {
         async function getBlogs() {
-            try {
-            const response = await fetch(serverDomain + "chalky");
-            const jsonData = await response.json();
-            setData(jsonData);
+            try {   
+                const response = await fetch(serverDomain + "chalky");
+                const jsonData = await response.json();
+                setData(jsonData);
             } catch (error) {
-            console.log(error);
+                console.log(error);
             }
         }
         getBlogs();

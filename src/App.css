@@ -20,6 +20,7 @@ body{
   border-radius: 2vw;
   padding: 1vw;
   width: 90%;
+  cursor: pointer;
 }
 
 .chalkaImg{
@@ -44,6 +45,9 @@ body{
 }
 .comment{
   padding: 2vw;
-  margin: 5vw;
+  margin: 3vw;
   background-color: var(--bg);
+}
+.header{
+  cursor: pointer;
 }
