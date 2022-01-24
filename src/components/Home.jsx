@@ -6,7 +6,7 @@ function Home() {
 
     useEffect(() => {
         async function getBlogs() {
-            try {   
+            try {
                 const response = await fetch(serverDomain + "chalky");
                 const jsonData = await response.json();
                 setData(jsonData);
@@ -21,6 +21,7 @@ return <div>
         <title>Chálky ze školní jídelny</title>
             <div className="Nejnovější chálky">
                 <h2>Nejnovější chálky</h2>
+                <button onClick={()=>window.location = "new/chalka"} className="addchalka">+</button>
                 <div className="chalky">
                     {data[0] && data.map((d)=>{
                         return(
@@ -31,7 +32,7 @@ return <div>
                             </div>
                         )
                     })}
-                </div>     
+                </div>    
             </div>
     </div>
 }

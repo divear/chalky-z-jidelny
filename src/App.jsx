@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Home from "./components/Home.jsx"
 import SpecificChalka from './components/SpecificChalka';
+import NewChalka from './components/NewChalka';
 
 function App() {
   return (
@@ -16,8 +17,9 @@ function App() {
       </div>
       <Router>
         <Routes>
+          <Route path="new/chalka" element={<NewChalka/>}></Route>
           <Route path="chalky/:id" element={<SpecificChalka/>}></Route>
-            <Route exact path="/" element={<Home />}></Route>
+          <Route exact path="/" element={<Home />}></Route>
         </Routes>
       </Router>
 

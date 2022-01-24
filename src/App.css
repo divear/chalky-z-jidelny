@@ -7,7 +7,18 @@ body{
   background-color: var(--bg);
   color: rgb(228, 231, 248);
 }
-
+button{
+  background-color: var(--fr);
+  font-size: 3vw;
+  border-radius: 2vw;
+  color: aliceblue;
+  cursor: pointer;
+  border: none;
+  padding: 0.4vw;
+}
+figure{
+  margin: 10vw;
+}
 .chalky{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -50,4 +61,11 @@ body{
 }
 .header{
   cursor: pointer;
+}
+.addchalka{
+  float: right;
+}
+.newchalkaInput{
+  font-size: 2vw;
+  width: 60vw;
 }
