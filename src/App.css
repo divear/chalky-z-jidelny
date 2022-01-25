@@ -1,6 +1,6 @@
 :root{
-  --bg: rgb(27, 29, 36);
-  --fr: rgb(42, 49, 71);
+  --bg: #1b1d24;
+  --fr: #2a3147;
 }
 
 body{
@@ -18,6 +18,11 @@ button{
 }
 figure{
   margin: 10vw;
+}
+input{
+  margin: 1vw 20vw;
+  font-size: 1vw;
+  padding: 0.2vw;
 }
 .chalky{
   display: grid;
@@ -68,4 +73,16 @@ figure{
 .newchalkaInput{
   font-size: 2vw;
   width: 60vw;
+}
+.no{
+  display: none;
+}
+.spinner{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 20vw;
+}
+.newChalkaPage{
+  overflow: hidden;
 }
