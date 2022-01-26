@@ -17,25 +17,22 @@ function NewChalka() {
   const [imgLink, setImgLink] = useState("")
   const [stars, setStars] = useState(0)
   const [username, setUsername] = useState("")
+
   const [isDisabled, setIsDisabled] = useState(false)
+  const [error, setError] = useState("")
 
   function submit(e){
-    e.preventDefault() // function isSet(){
-    //   console.log(arr[1].imgLink);
-    //   console.log(snapshot);
-    //   if(!arr[1].imgLink){
-    //     setTimeout(isSet, 100)
-    //     return
-    //   }
-    //   console.log(`found: ${arr[1].imgLink}`);
-    // }
-    // isSet()
-    console.log(imgLink);
+    e.preventDefault()
+    if(!nazev | !imgLink | !stars | !username){
+      setError("Všechna pole jsou povinná!");
+      return
+    }
+    localStorage.setItem("username" , username)
     const spaceRef = ref(storage, `images/${img.name}`);
     uploadBytes(spaceRef, img).then(async(snapshot) => {
       try {
           setIsDisabled(true)
- 
+
           const Rnazev = {nazev}
           const Rlink = {imgLink}
           const Rstars = {stars}
@@ -66,14 +63,18 @@ function NewChalka() {
   }
 
   return <div className='newChalkaPage'>
+    <title>Nová chálka</title>
     <h2>Nová chálka</h2>
     <img className={isDisabled ? "spinner" : "no"} src={spinner} alt="" />
     <form onSubmit={submit} action="">
-      <input type="text"  value={username} onChange={e=>setUsername(e.target.value)} placeholder='přezdívka'/>
+      <input type="text"  value={username} onChange={e=>setUsername(e.target.value)} placeholder='Vaše přezdívka'/>
       <input onChange={e=>setNazev(e.target.value)} value={nazev} className='newchalkaInput' placeholder='Název chálky' type="text" />
-      <input onChange={e=>changeFile(e)} type="file"/>
+      <input onChange={e=>changeFile(e)} type="file" accept="image/*"/>
+      <img className='chalkaImg floatRight' src={imgLink} alt="" />
       <input min="0" max="5" type="number" value={stars} onChange={e=>setStars(e.target.value)}/>
       <button  disabled={isDisabled}>Poslat</button>
+
+      <h1 className='error'>{error}</h1>
     </form>
 
   </div>;
