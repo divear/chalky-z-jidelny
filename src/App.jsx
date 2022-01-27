@@ -12,13 +12,13 @@ import NewChalka from './components/NewChalka';
 function App() {
   return (
     <>
-      <div className='header' onClick={()=>window.location = "/"}>
+      <div className='header' onClick={() => window.location = "/"}>
         <h1>🍛 Chálky ze školní jídelny</h1>
       </div>
       <Router>
         <Routes>
-          <Route path="new/chalka" element={<NewChalka/>}></Route>
-          <Route path="chalky/:id" element={<SpecificChalka/>}></Route>
+          <Route path="new/chalka" element={<NewChalka />}></Route>
+          <Route path="chalky/:id" element={<SpecificChalka />}></Route>
           <Route exact path="/" element={<Home />}></Route>
         </Routes>
       </Router>

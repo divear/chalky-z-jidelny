@@ -27,7 +27,7 @@ return <div>
                     {data[0] && data.map((d)=>{
                         return(
                             <div onClick={()=>window.location = `/chalky/${d.id}`} key={d.id} className="chalka">
-                                <h5>{d.username}</h5>
+                                <h5><i>{d.username}</i></h5>
                                 <h4>{d.nazev}</h4>
 
                                 {/* stars */}
