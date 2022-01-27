@@ -26,6 +26,8 @@ function NewChalka() {
     if (!nazev | !imgLink | !stars | !username) {
       setError("Všechna pole jsou povinná!");
       return
+    } else if (stars > 5) {
+      setError("Největší počet hvězdiček je 5")
     }
     localStorage.setItem("username", username)
     const spaceRef = ref(storage, `images/${img.name}`);
