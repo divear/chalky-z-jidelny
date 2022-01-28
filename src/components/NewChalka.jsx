@@ -73,6 +73,7 @@ function NewChalka() {
       <input onChange={e => setNazev(e.target.value)} value={nazev} className='newchalkaInput' placeholder='Název chálky' type="text" />
       <input onChange={e => changeFile(e)} type="file" accept="image/*" />
       <img className='chalkaImg floatRight' src={imgLink} alt="" />
+      <p>hvězdy</p>
       <input min="0" max="5" type="number" value={stars} onChange={e => setStars(e.target.value)} />
       <button disabled={isDisabled}>Poslat</button>
 

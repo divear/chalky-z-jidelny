@@ -54,6 +54,7 @@ function NewComment() {
         <form onSubmit={submit} action="">
             <input type="text" value={username} onChange={e => setUsername(e.target.value)} placeholder='Vaše přezdívka' />
             <textarea onChange={e => setbody(e.target.value)} value={body} className='newchalkaInput' placeholder='Komentář...' type="text" />
+            <p>hvězdy</p>
             <input min="0" max="5" type="number" value={stars} onChange={e => setStars(e.target.value)} />
             <button disabled={isDisabled}>Poslat</button>
 

@@ -34,6 +34,11 @@ input{
   font-size: 1vw;
   padding: 0.2vw;
 }
+textarea{
+  margin: 1vw 20vw;
+  font-size: 1vw;
+  padding: 0.2vw;
+}
 .chalky{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
