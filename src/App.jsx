@@ -8,6 +8,7 @@ import {
 import Home from "./components/Home.jsx"
 import SpecificChalka from './components/SpecificChalka';
 import NewChalka from './components/NewChalka';
+import NewComment from './components/NewComment';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       </div>
       <Router>
         <Routes>
+          <Route path="chalky/:id/new/comment" element={<NewComment />}></Route>
           <Route path="new/chalka" element={<NewChalka />}></Route>
           <Route path="chalky/:id" element={<SpecificChalka />}></Route>
           <Route exact path="/" element={<Home />}></Route>

@@ -26,3 +26,9 @@ CREATE TABLE comments (
 );
 
 mysql -h bcpjg9hximgkbe8ysn9a-mysql.services.clever-cloud.com -P 3306 -u uwiqcu29mldh2s5o -p
+
+ALTER TABLE comments
+ADD COLUMN stars INT(1);
+
+ALTER TABLE comments
+RENAME COLUMN strars TO stars;

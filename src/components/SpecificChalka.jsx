@@ -35,7 +35,7 @@ function SpecificChalka() {
             <h4>{data[0] && data[0].stars}/5</h4>
             <h3 className='date'>{data[0] && data[0].posted_date}</h3>
             <a href={data[0] && data[0].img}><img className='chalkaImgBig' src={data[0] && data[0].img} alt="" /></a>
-            <button onClick={() => window.location = "new/chalka"} className="addchalka">+</button>
+            <button onClick={() => window.location = `/chalky/${data[0].id}/new/comment`} className="addchalka">+</button>
 
 
             {data[0] && data[0].comment_body && data.map((d) => {

@@ -10,7 +10,7 @@ function Home() {
             try {
                 const response = await fetch(serverDomain + "chalky");
                 const jsonData = await response.json();
-                setData(jsonData);
+                setData(jsonData.reverse());
             } catch (error) {
                 console.log(error);
             }
@@ -38,6 +38,7 @@ function Home() {
                     )
                 })}
             </div>
+            <p>Made by Lukáš Odehnal</p>
         </div>
     </div>
 }
