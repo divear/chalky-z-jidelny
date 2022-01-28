@@ -41,9 +41,18 @@ function SpecificChalka() {
             {data[0] && data[0].comment_body && data.map((d) => {
                 return (
                     <div key={d.comment_id} className='comment'>
-                        <h3 className='date'>{d.comment_date}</h3>
+
+
+                        {/* stars */}
+                        {[...Array(d.comment_stars)].map((i) => <span key={i}><img className='star' src={star} alt="" /></span>)}fasd
+
+                        <h3 className='date down'>{d.comment_date}</h3>
+
+
                         <i>{d.comment_username || "anonym"}</i>
+
                         <h2>{d.comment_body}</h2>
+
                     </div>
                 )
             })}

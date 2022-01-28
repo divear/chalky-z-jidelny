@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import star from "./imgs/fullStar.png"
 
 function Home() {
-    const serverDomain = "https://chalky-z-jidelny.herokuapp.com/"
+    // const serverDomain = "https://chalky-z-jidelny.herokuapp.com/"
+    const serverDomain = "http://localhost:4000/"
+
     const [data, setData] = useState([]);
 
     useEffect(() => {

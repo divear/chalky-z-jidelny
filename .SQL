@@ -10,7 +10,7 @@ CREATE TABLE chalky (
     PRIMARY KEY(id)
 );
 
-INSERT INTO chalky(nazev, img, datum, stars) VALUES('dobrej chálec' , 'https://www.chiropracticmoves.com.au/wp-content/uploads/2019/12/Junk-food.jpg', now(), 0);
+INSERT INTO chalky(nazev, img, datum, stars) VALUES('dobrej chálec💯' , 'https://www.chiropracticmoves.com.au/wp-content/uploads/2019/12/Junk-food.jpg', now(), 0);
 INSERT INTO comments(body, posted_date, chalka_id) VALUES('dobrej oběd', now(), 1);
 
 
@@ -32,3 +32,15 @@ ADD COLUMN stars INT(1);
 
 ALTER TABLE comments
 RENAME COLUMN strars TO stars;
+
+ALTER TABLE comments DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE comments CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_bin;
+
+ALTER DATABASE bcpjg9hximgkbe8ysn9a CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
+
+ALTER TABLE comments CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+ALTER TABLE chalky MODIFY nazev TEXT CHARSET utf8mb4;
+
+ALTER TABLE messages MODIFY content BLOB;
