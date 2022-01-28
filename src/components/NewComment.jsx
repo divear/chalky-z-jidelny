@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import spinner from "./imgs/loading.gif"
+import star from "./imgs/fullStar.png"
 
 
 function NewComment() {
@@ -10,15 +11,15 @@ function NewComment() {
 
     const { id } = useParams()
     const [body, setbody] = useState("")
-    const [stars, setStars] = useState("0")
-    const [username, setUsername] = useState("")
+    const [stars, setStars] = useState(null)
+    const [username, setUsername] = useState(localStorage.getItem("username") || "")
 
     const [isDisabled, setIsDisabled] = useState(false)
     const [error, setError] = useState("")
 
     async function submit(e) {
         e.preventDefault()
-        if (!body | !stars | !username) {
+        if (!body | !username) {
             setError("Všechna pole jsou povinná!");
             return
         } else if (stars > 5) {
@@ -48,15 +49,29 @@ function NewComment() {
     }
     return <div>
         <title>Nový komentář k chálce {id}</title>
-        <h2>Nový komentář k chálce {id}</h2>
+        <h2 className='headerText'>Nový komentář k chálce {id}</h2>
 
         <img className={isDisabled ? "spinner" : "no"} src={spinner} alt="" />
         <form onSubmit={submit} action="">
             <input type="text" value={username} onChange={e => setUsername(e.target.value)} placeholder='Vaše přezdívka' />
+            {/* <p>hvězdy</p>
+            <input min="0" max="5" type="number" value={stars} onChange={e => setStars(e.target.value)} /> */}
+
+            <div className='allStarsPicker'>
+                {[...Array(5)].map((s, i) => {
+                    const ratingValue = i + 1
+                    return (
+                        <label key={i}>
+                            <input name='rating' className='no' type="radio" value={ratingValue} onClick={() => setStars(ratingValue)} />
+                            <img className={ratingValue > stars ? 'starPickerGrey' : 'starPicker'} src={star} alt="" />
+                        </label>
+                    )
+                })}
+            </div>
+
             <textarea onChange={e => setbody(e.target.value)} value={body} className='newchalkaInput' placeholder='Komentář...' type="text" />
-            <p>hvězdy</p>
-            <input min="0" max="5" type="number" value={stars} onChange={e => setStars(e.target.value)} />
-            <button disabled={isDisabled}>Poslat</button>
+
+            <button className='poslat' disabled={isDisabled}>Poslat</button>
 
             <h1 className='error'>{error}</h1>
         </form>

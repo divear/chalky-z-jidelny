@@ -35,22 +35,17 @@ function SpecificChalka() {
             <h4>{data[0] && data[0].stars}/5</h4>
             <h3 className='date'>{data[0] && data[0].posted_date}</h3>
             <a href={data[0] && data[0].img}><img className='chalkaImgBig' src={data[0] && data[0].img} alt="" /></a>
-            <button onClick={() => window.location = `/chalky/${data[0].id}/new/comment`} className="addchalka">+</button>
+            <button title='Přidej komentář' onClick={() => window.location = `/chalky/${data[0].id}/new/comment`} className="addchalka">+</button>
 
 
             {data[0] && data[0].comment_body && data.map((d) => {
                 return (
                     <div key={d.comment_id} className='comment'>
 
-
                         {/* stars */}
-                        {[...Array(d.comment_stars)].map((i) => <span key={i}><img className='star' src={star} alt="" /></span>)}fasd
-
+                        {[...Array(d.comment_stars)].map((i) => <span key={i}><img className='star' src={star} alt="" /></span>)}
                         <h3 className='date down'>{d.comment_date}</h3>
-
-
                         <i>{d.comment_username || "anonym"}</i>
-
                         <h2>{d.comment_body}</h2>
 
                     </div>

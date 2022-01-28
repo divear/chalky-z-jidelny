@@ -66,7 +66,7 @@ function NewChalka() {
 
   return <div className='newChalkaPage'>
     <title>Nová chálka</title>
-    <h2>Nová chálka</h2>
+    <h2 className='headerText'>Nová chálka</h2>
     <img className={isDisabled ? "spinner" : "no"} src={spinner} alt="" />
     <form onSubmit={submit} action="">
       <input type="text" value={username} onChange={e => setUsername(e.target.value)} placeholder='Vaše přezdívka' />

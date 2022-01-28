@@ -10,6 +10,7 @@
 body{
   background-color: var(--bg);
   color: var(--bright);
+  overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 *{
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -90,7 +91,7 @@ textarea{
   left: 98%;
 }
 .newchalkaInput{
-  font-size: 2vw;
+  font-size: 3rem;
   width: 60vw;
 }
 .no{
@@ -117,4 +118,26 @@ textarea{
 .down{
   margin-top: 4vw;
   margin-right: -1vw;
+}
+.headerText{
+  font-size: 1.5rem;
+  text-align: center;
+}
+.starPicker{
+  cursor: pointer;
+  width: 4rem;
+}
+.starPickerGrey{
+  cursor: pointer;
+  width: 4rem;
+  filter: sepia(100%);
+  -webkit-filter: sepia(100%);
+}
+
+.allStarsPicker{
+  margin: 0 20vw;
+}
+.poslat{
+  float: right;
+  margin: 5vw;
 }
