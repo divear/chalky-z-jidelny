@@ -4,8 +4,7 @@ import star from "./imgs/fullStar.png"
 
 
 function SpecificChalka() {
-    // const serverDomain = "https://chalky-z-jidelny.herokuapp.com/"
-    const serverDomain = "http://localhost:4000/"
+    const serverDomain = process.env.REACT_APP_SERVERDOMAIN
 
     const [data, setData] = useState([])
     const { id } = useParams()
@@ -32,7 +31,6 @@ function SpecificChalka() {
             <h2>{data[0] && data[0].nazev}</h2>
             {/* stars */}
             {[...Array(data[0] && data[0].stars)].map((i) => <span key={i}><img className='star' src={star} alt="" /></span>)}
-            <h4>{data[0] && data[0].stars}/5</h4>
             <h3 className='date'>{data[0] && data[0].posted_date}</h3>
             <a href={data[0] && data[0].img}><img className='chalkaImgBig' src={data[0] && data[0].img} alt="" /></a>
             <button title='Přidej komentář' onClick={() => window.location = `/chalky/${data[0].id}/new/comment`} className="addchalka">+</button>

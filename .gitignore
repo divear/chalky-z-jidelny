@@ -13,7 +13,7 @@
 /build
 
 # misc
-firebase.js
+.SQL
 .DS_Store
 .env
 .env.local

@@ -40,6 +40,15 @@ textarea{
   font-size: 1vw;
   padding: 0.2vw;
 }
+footer{
+  background-color: var(--fr);
+  padding: 0.5rem;
+  margin: 2rem 0 0 0;
+}
+a{
+  color: #6F8EE8;
+}
+
 .chalky{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -83,6 +92,10 @@ textarea{
 }
 .header{
   cursor: pointer;
+  font-size: 1rem;
+}
+.logoImg{
+  width: 2vw;
 }
 .addchalka{
   position: -webkit-sticky;
@@ -140,4 +153,8 @@ textarea{
 .poslat{
   float: right;
   margin: 5vw;
+}
+.info{
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
 }

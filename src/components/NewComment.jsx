@@ -5,8 +5,7 @@ import star from "./imgs/fullStar.png"
 
 
 function NewComment() {
-    // const serverDomain = "https://chalky-z-jidelny.herokuapp.com/"
-    const serverDomain = "http://localhost:4000/"
+    const serverDomain = process.env.REACT_APP_SERVERDOMAIN
 
 
     const { id } = useParams()
@@ -54,8 +53,6 @@ function NewComment() {
         <img className={isDisabled ? "spinner" : "no"} src={spinner} alt="" />
         <form onSubmit={submit} action="">
             <input type="text" value={username} onChange={e => setUsername(e.target.value)} placeholder='Vaše přezdívka' />
-            {/* <p>hvězdy</p>
-            <input min="0" max="5" type="number" value={stars} onChange={e => setStars(e.target.value)} /> */}
 
             <div className='allStarsPicker'>
                 {[...Array(5)].map((s, i) => {

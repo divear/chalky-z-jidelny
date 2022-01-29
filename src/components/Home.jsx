@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import star from "./imgs/fullStar.png"
 
 function Home() {
-    // const serverDomain = "https://chalky-z-jidelny.herokuapp.com/"
-    const serverDomain = "http://localhost:4000/"
+    const serverDomain = process.env.REACT_APP_SERVERDOMAIN
 
     const [data, setData] = useState([]);
 
@@ -23,12 +22,12 @@ function Home() {
     return <div>
         <title>Chálky ze školní jídelny</title>
         <div className="Nejnovější chálky">
-            <h2>Nejnovější chálky</h2>
-            <button onClick={() => window.location = "new/chalka"} className="addchalka">+</button>
+            <h2 className='headerText'>Nejnovější chálky</h2>
+            <button title='Přidat novej chálec' onClick={() => window.location = "new/chalka"} className="addchalka">+</button>
             <div className="chalky">
                 {data[0] && data.map((d) => {
                     return (
-                        <div onClick={() => window.location = `/chalky/${d.id}`} key={d.id} className="chalka">
+                        <div title={`Chálka ${d.id}`} onClick={() => window.location = `/chalky/${d.id}`} key={d.id} className="chalka">
                             <h5><i>{d.username}</i></h5>
                             <h4>{d.nazev}</h4>
 
@@ -40,7 +39,10 @@ function Home() {
                     )
                 })}
             </div>
-            <p>Made by Lukáš Odehnal</p>
+            <footer>
+                Made by Lukáš Odehnal
+                <a className='floatRight' href="/info">info</a>
+            </footer>
         </div>
     </div>
 }

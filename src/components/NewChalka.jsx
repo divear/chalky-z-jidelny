@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { ref, getStorage, uploadBytes, token } from './firebase';
+import { ref, getStorage, uploadBytes } from './firebase';
 import spinner from "./imgs/loading.gif"
+import star from "./imgs/fullStar.png"
 
 
 const storage = getStorage()
@@ -8,8 +9,7 @@ const storage = getStorage()
 
 
 function NewChalka() {
-  // const serverDomain = "https://chalky-z-jidelny.herokuapp.com/"
-  const serverDomain = "http://localhost:4000/"
+  const serverDomain = process.env.REACT_APP_SERVERDOMAIN
 
 
   const [nazev, setNazev] = useState("")
@@ -73,9 +73,20 @@ function NewChalka() {
       <input onChange={e => setNazev(e.target.value)} value={nazev} className='newchalkaInput' placeholder='Název chálky' type="text" />
       <input onChange={e => changeFile(e)} type="file" accept="image/*" />
       <img className='chalkaImg floatRight' src={imgLink} alt="" />
-      <p>hvězdy</p>
-      <input min="0" max="5" type="number" value={stars} onChange={e => setStars(e.target.value)} />
-      <button disabled={isDisabled}>Poslat</button>
+
+      <div className='allStarsPicker'>
+        {[...Array(5)].map((s, i) => {
+          const ratingValue = i + 1
+          return (
+            <label key={i}>
+              <input name='rating' className='no' type="radio" value={ratingValue} onClick={() => setStars(ratingValue)} />
+              <img className={ratingValue > stars ? 'starPickerGrey' : 'starPicker'} src={star} alt="" />
+            </label>
+          )
+        })}
+      </div>
+
+      <button className='poslat' disabled={isDisabled}>Poslat</button>
 
       <h1 className='error'>{error}</h1>
     </form>
