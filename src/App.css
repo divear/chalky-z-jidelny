@@ -189,3 +189,38 @@ a{
     margin: 10vw 0 1vw 0;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  
+  .chalky{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+  .star{
+    width: 7vw;
+  }
+  .header{
+    font-size: 0.5em;
+  }
+  .addchalka{
+    font-size: 3rem;
+    padding: 1vw;
+    width: auto;
+    margin: 2vw;
+  }
+  .starPickerGrey{
+    width: 3rem;
+  }
+  .starPicker{
+    width: 3rem;
+  }
+  .allStarsPicker{
+    width: 100%;
+  }
+  .newchalkaInput{
+    width: 80%;
+    margin: 0 0 0 10%;
+  }
+}
