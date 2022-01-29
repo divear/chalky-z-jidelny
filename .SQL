@@ -44,3 +44,7 @@ ALTER TABLE comments CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
 ALTER TABLE chalky MODIFY nazev TEXT CHARSET utf8mb4;
 
 ALTER TABLE messages MODIFY content BLOB;
+
+ALTER DATABASE bcpjg9hximgkbe8ysn9a CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci;
+
+ALTER TABLE comments CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_bin

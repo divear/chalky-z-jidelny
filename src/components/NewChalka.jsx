@@ -69,7 +69,7 @@ function NewChalka() {
     <h2 className='headerText'>Nová chálka</h2>
     <img className={isDisabled ? "spinner" : "no"} src={spinner} alt="" />
     <form onSubmit={submit} action="">
-      <input type="text" value={username} onChange={e => setUsername(e.target.value)} placeholder='Vaše přezdívka' />
+      <input className='username' type="text" value={username} onChange={e => setUsername(e.target.value)} placeholder='Vaše přezdívka' />
       <input onChange={e => setNazev(e.target.value)} value={nazev} className='newchalkaInput' placeholder='Název chálky' type="text" />
       <input onChange={e => changeFile(e)} type="file" accept="image/*" />
       <img className='chalkaImg floatRight' src={imgLink} alt="" />

@@ -52,7 +52,7 @@ function NewComment() {
 
         <img className={isDisabled ? "spinner" : "no"} src={spinner} alt="" />
         <form onSubmit={submit} action="">
-            <input type="text" value={username} onChange={e => setUsername(e.target.value)} placeholder='Vaše přezdívka' />
+            <input type="text" className='username' value={username} onChange={e => setUsername(e.target.value)} placeholder='Vaše přezdívka' />
 
             <div className='allStarsPicker'>
                 {[...Array(5)].map((s, i) => {
