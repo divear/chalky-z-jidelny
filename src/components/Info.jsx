@@ -2,7 +2,7 @@ import React from 'react';
 
 function Info() {
     return <div>
-        <title>Info</title>
+        <title>Info </title>
         <h2 className='headerText'>Info</h2>
         <p className='info'>
             Vytvořeno Lukášem Odehnalem<br />

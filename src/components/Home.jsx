@@ -39,7 +39,10 @@ function Home() {
                     )
                 })}
             </div>
-
+            <footer>
+                Made by Lukáš Odehnal
+                <a className='floatRight' href="/info">info</a>
+            </footer>
         </div>
     </div>
 }

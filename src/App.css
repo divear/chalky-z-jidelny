@@ -45,6 +45,7 @@ footer{
   background-color: var(--fr);
   padding: 0.5rem;
   margin: 2rem 0 0 0;
+  bottom: 0;
 }
 a{
   color: #6F8EE8;

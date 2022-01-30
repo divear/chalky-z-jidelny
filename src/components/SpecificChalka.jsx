@@ -36,24 +36,28 @@ function SpecificChalka() {
             <button title='Přidej komentář' onClick={() => window.location = `/chalky/${data[0].id}/new/comment`} className="addchalka">+</button>
 
 
-            {data[0] && data[0].comment_body && data.map((d) => {
-                return (
-                    <div key={d.comment_id} className='comment'>
+            <div className="comments">
+                {data[0] && data[0].comment_body && data.map((d) => {
+                    return (
+                        <div key={d.comment_id} className='comment'>
 
-                        {/* stars */}
-                        {[...Array(d.comment_stars)].map((i) => <span key={i}><img className='star' src={star} alt="" /></span>)}
-                        <h3 className='date down'>{d.comment_date}</h3>
-                        <i>{d.comment_username || "anonym"}</i>
-                        <h2>{d.comment_body}</h2>
+                            {/* stars */}
+                            {[...Array(d.comment_stars)].map((i) => <span key={i}><img className='star' src={star} alt="" /></span>)}
+                            <h3 className='date down'>{d.comment_date}</h3>
+                            <i>{d.comment_username || "anonym"}</i>
+                            <h2>{d.comment_body}</h2>
 
-                    </div>
-                )
-            })}
+                        </div>
+                    )
+                })}
+            </div>
+
         </div>
 
-        <div className='comments'>
-
-        </div>
+        <footer>
+            Made by Lukáš Odehnal
+            <a className='floatRight' href="/info">info</a>
+        </footer>
     </div>;
 }
 

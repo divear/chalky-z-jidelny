@@ -29,10 +29,7 @@ function App() {
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </Router>
-      <footer>
-        Made by Lukáš Odehnal
-        <a className='floatRight' href="/info">info</a>
-      </footer>
+
     </>
   );
 }
