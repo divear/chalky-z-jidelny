@@ -11,6 +11,7 @@ import NewChalka from './components/NewChalka';
 import NewComment from './components/NewComment';
 import logo from "./components/imgs/logo.png"
 import Info from './components/Info';
+import NotFound from './components/NotFound';
 
 function App() {
   return (
@@ -25,9 +26,13 @@ function App() {
           <Route path="new/chalka" element={<NewChalka />}></Route>
           <Route path="chalky/:id" element={<SpecificChalka />}></Route>
           <Route exact path="/" element={<Home />}></Route>
+          <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </Router>
-
+      <footer>
+        Made by Lukáš Odehnal
+        <a className='floatRight' href="/info">info</a>
+      </footer>
     </>
   );
 }
