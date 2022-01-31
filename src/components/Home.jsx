@@ -4,7 +4,6 @@ import loading from "./imgs/loading.gif"
 
 function Home() {
     const serverDomain = process.env.REACT_APP_SERVERDOMAIN
-
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -29,7 +28,7 @@ function Home() {
                 {data[0] ? data.map((d) => {
                     return (
                         <div title={`Chálka ${d.id}`} onClick={() => window.location = `/chalky/${d.id}`} key={d.id} className="chalka">
-                            <h5><i>{d.username}</i></h5>
+                            <h5 className={d.username === localStorage.getItem("username") ? "me" : ""}><i>{d.username}</i></h5>
                             <h4>{d.nazev}</h4>
 
                             {/* stars */}
