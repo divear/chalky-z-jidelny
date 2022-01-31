@@ -46,7 +46,7 @@ function NewComment() {
             console.log(error);
         }
     }
-    return <div>
+    return <div className='newChalkaPage'>
         <title>Nový komentář k chálce {id}</title>
         <h2 className='headerText'>Nový komentář k chálce {id}</h2>
 

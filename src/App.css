@@ -225,4 +225,7 @@ a{
     width: 80%;
     margin: 0 0 0 10%;
   }
+  .newChalkaPage{
+    overflow: hidden;
+  }
 }
