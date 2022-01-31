@@ -7,6 +7,9 @@ import star from "./imgs/fullStar.png"
 const storage = getStorage()
 
 
+const tempImage = new Image()
+
+
 
 function NewChalka() {
   const serverDomain = process.env.REACT_APP_SERVERDOMAIN
@@ -60,7 +63,6 @@ function NewChalka() {
 
   function changeFile(e) {
     setImg(e.target.files[0])
-    console.log(e.target.files[0]);
     setImgLink(`https://firebasestorage.googleapis.com/v0/b/chalky-69039.appspot.com/o/images%2F${e.target.files[0].name}?alt=media`)
   }
 
@@ -72,7 +74,7 @@ function NewChalka() {
       <input className='username' type="text" value={username} onChange={e => setUsername(e.target.value)} placeholder='Vaše přezdívka' />
       <input onChange={e => setNazev(e.target.value)} value={nazev} className='newchalkaInput' placeholder='Název chálky' type="text" />
       <input onChange={e => changeFile(e)} type="file" accept="image/*" />
-      <img className='chalkaImg floatRight' src={imgLink} alt="" />
+      <img className='chalkaImg floatRight' src={img} alt="" />
 
       <div className='allStarsPicker'>
         {[...Array(5)].map((s, i) => {
