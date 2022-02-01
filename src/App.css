@@ -164,6 +164,9 @@ a{
   color: var(--bright);
   text-decoration: underline 1px;
 }
+.jestli{
+  margin: 0 4vw 0 0;
+}
 
 
 
@@ -230,5 +233,9 @@ a{
   }
   .newChalkaPage{
     overflow: hidden;
+  }
+  .jestli{
+    font-size: 0.7rem;
+    margin: 8vw 15vw 0 0;
   }
 }

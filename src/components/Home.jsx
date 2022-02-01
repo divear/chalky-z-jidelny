@@ -23,6 +23,7 @@ function Home() {
         <title>Chálky ze školní jídelny</title>
         <div className="Nejnovější chálky">
             <h2 className='headerText'>Nejnovější chálky</h2>
+            <p className={localStorage.getItem("username") ? "no" : "jestli floatRight"}>Jestli chceš tak přidej vlastní chálky ---&gt;</p>
             <button title='Přidat novej chálec' onClick={() => window.location = "new/chalka"} className="addchalka">+</button>
             <div className="chalky">
                 {data[0] ? data.map((d) => {
@@ -44,7 +45,7 @@ function Home() {
                 <a className='floatRight' href="/info">info</a>
             </footer>
         </div>
-    </div>
+    </div >
 }
 
 export default Home;
