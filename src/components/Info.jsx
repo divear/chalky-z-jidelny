@@ -10,10 +10,11 @@ function Info() {
             Zdrojový kód: <a href="https://github.com/lukascobit/chalky-z-jidelny">https://github.com/lukascobit/chalky-z-jidelny</a>
         </p>
         <h2 className='headerText'>Pravidla</h2>
-        <ul className='info'>
+        <ol className='info'>
             <li>Zákaz spamu</li>
             <li>Zákaz posílání ničeho, co není jídlo</li>
-        </ul>
+            <li>Zákaz nelegálního obsahu (viz. pravidlo 2.)</li>
+        </ol>
 
     </div>;
 }
