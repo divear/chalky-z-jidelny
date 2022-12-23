@@ -4,7 +4,6 @@ import loading from "./imgs/loading.gif"
 
 function Home() {
     const serverDomain = process.env.REACT_APP_SERVERDOMAIN
-    console.log(serverDomain);
     const [data, setData] = useState([]);
 
     useEffect(() => {
