@@ -7,9 +7,6 @@ import star from "./imgs/fullStar.png"
 const storage = getStorage()
 
 
-const tempImage = new Image()
-
-
 
 function NewChalka() {
   const serverDomain = process.env.REACT_APP_SERVERDOMAIN
